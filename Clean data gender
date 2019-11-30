@@ -1,0 +1,58 @@
+### Note: not all categories cleaned yet...
+```{r}
+diffgender <- unique(survey$Gender)
+```
+
+```{r}
+#Male
+survey$Gender<-replace(survey$Gender,survey$Gender=="M","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="m","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="male","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="Male ","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="maile","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="Mail","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="Man","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="Mal","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="Malr","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="msle","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="Make","Male")
+
+
+#Female
+survey$Gender<-replace(survey$Gender,survey$Gender=="F","Female")
+survey$Gender<-replace(survey$Gender,survey$Gender=="f","Female")
+survey$Gender<-replace(survey$Gender,survey$Gender=="female","Female")
+survey$Gender<-replace(survey$Gender,survey$Gender=="Female ","Female")
+survey$Gender<-replace(survey$Gender,survey$Gender=="Femake","Female")
+survey$Gender<-replace(survey$Gender,survey$Gender=="Woman","Female")
+survey$Gender<-replace(survey$Gender,survey$Gender=="woman","Female")
+
+#Cis
+#??partial match, do "fe" first for females, than "male" for males
+
+
+
+#Cis female
+survey$Gender<-replace(survey$Gender,survey$Gender=="Cis Female","Female")
+survey$Gender<-replace(survey$Gender,survey$Gender=="cis-female/femme","Female")
+
+survey$Gender<-replace(survey$Gender,survey$Gender=="Female (cis)","Female")
+survey$Gender<-replace(survey$Gender,survey$Gender=="","Female")
+survey$Gender<-replace(survey$Gender,survey$Gender=="","Female")
+
+
+#Cis male
+survey$Gender<-replace(survey$Gender,survey$Gender=="Cis Male","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="cis male","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="Cis Man","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="Male (CIS)","Male")
+survey$Gender<-replace(survey$Gender,survey$Gender=="","Male")
+
+#Trans
+
+```
+
+```{r}
+diffgender <- unique(survey$Gender)
+diffgender
+```
