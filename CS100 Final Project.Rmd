@@ -1,6 +1,6 @@
 ---
 title: "CS100 Final Project"
-author: "Mariel Pacada"
+author: "Silei Li and Mariel Pacada"
 date: "12/7/2019"
 output: pdf_document
 ---
