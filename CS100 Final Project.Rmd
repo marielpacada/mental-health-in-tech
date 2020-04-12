@@ -128,6 +128,7 @@ map_countries = wrld_simpl@data$NAME %in% survey_countries$Country
 plot(wrld_simpl, col = c(gray(.80), "red")[map_countries+1], main = "Countries represented in the dataset")
 ```
 
+
 ```{r tech}
 tech_binary <- survey %>%
                  filter(!is.na(tech_company)) %>%

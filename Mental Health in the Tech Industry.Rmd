@@ -1,6 +1,6 @@
 ---
 title: "Mental Health in the Tech Industry"
-author: "SIlei Li and Mariel Pacada"
+author: "Silei Li and Mariel Pacada"
 date: "12/8/2019"
 output: html_document
 ---
@@ -256,7 +256,6 @@ Let's explore the data further!
 For example, those who said that they have observed coworkers facing consequences are more likely to expect that discussing mental health issue will lead to consequence than not; however, some of them still believe it won't necessarily lead to negative result. Simiarly, for those who have not heard of or seen coworkers facing negative consequences, they are more likely to expect that discussing such issue will not bring a consequence. Many of them still expect some negative consequences - not seeing similar situations does not free everyone from the worries.
 
 ```{r}
-#survey%>% filter(treatment=="YES")
 ggplot(survey, aes(x=factor(obs_consequence,levels = c("Yes","No")),
                    y=factor(mental_health_consequence, levels = c("Yes", "Maybe","No")), 
                    col=factor(no_employees,levels=c("1-5","6-25","26-100","100-500","500-1000","More than 1000"))))+
@@ -268,23 +267,6 @@ ggplot(survey, aes(x=factor(obs_consequence,levels = c("Yes","No")),
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
 panel.background = element_blank(), axis.line = element_line(colour = "grey"))+
   scale_color_brewer(palette="RdPu")
-
-```
-
-```{r}
-#survey%>% filter(treatment=="YES")
-ggplot(survey, aes(x=factor(obs_consequence,levels = c("Yes","No")),
-                   y=factor(mental_health_consequence, levels = c("Yes", "Maybe","No")), 
-                   col=factor(no_employees,levels=c("1-5","6-25","26-100","100-500","500-1000","More than 1000"))))+
-  geom_point(position="jitter")+
-  labs(title="Is seeing a coworker with mental health condition face consequence \nrelated to people's expectation that discussing such an issue leads \nto a similar consequence?",
-       x="Heard of/observed negative consequences for coworkers \nwith mental health conditions?", 
-       y="Discuss mental health issue --> consequence?",
-       col = "Company size \n(Number of employees)")+
-  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-panel.background = element_blank(), axis.line = element_line(colour = "grey"))+
-  scale_color_brewer(palette="RdPu")
-
 ```
 
 ##### Why do people not talk to supervisors about mental health problems? Is it that they are afraid of negative consequences?
@@ -504,7 +486,6 @@ my_nb <- NaiveBayes(no_employees ~ benefits+
                 anonymity, data = train)
 predict <- predict(my_nb, test)$class
 mean(predict == test$no_employees) # Testing accuracy
-
 ```
 We see that the Naive Bayes model does not provide strong predictions, only yielding about a 40% accuracy. 
 
