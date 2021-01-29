@@ -14,7 +14,7 @@ output: html_document
 ```{r setup, include = FALSE}
 # replace when grading
 
-setwd("/Users/marielpacada/cs10-final-prj")
+setwd("/Users/marielpacada/mental-health-in-tech")
 survey <- read.csv("mental-health-in-tech.csv") 
 countries <- read.csv("countries.csv", stringsAsFactors = FALSE)
 ```
@@ -35,7 +35,7 @@ library(klaR) # Naive Bayes
 
 ### Dataset and Goals
 
-This project will explore the relationship between mental health and the conditions in a workplace within the tech industry, which is relevant to the course as quite a few fellow students are aiming to work in this field. The datset we will use includes data from a 2014-2015 survey that measures attitudes towards mental health and frequency of mental health disorders in the tech workplace. We will explore whether the presence of mental health care options in one’s company predicts the mental health of an employee. We will also explore geographical differences, asking whether North America or Europe has better options and less social taboos on mental health.
+This project will explore the relationship between mental health and the conditions in a workplace within the tech industry, which is relevant to the course as quite a few fellow students are aiming to work in this field. The dataset we will use includes data from a 2014-2015 survey that measures attitudes towards mental health and frequency of mental health disorders in the tech workplace. We will explore whether the presence of mental health care options in one’s company predicts the mental health of an employee. We will also explore geographical differences, asking whether North America or Europe has better options and less social taboos on mental health.
 
 ### Data Cleaning Choices
 
